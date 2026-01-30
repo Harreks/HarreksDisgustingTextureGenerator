@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Harrek's Disgusting Texture Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Harrek's Disgusting Texture Generator</h1>
+    </header>
+
+    <section id="specsRow" class="specs-row" aria-label="Specs"></section>
+
+    <main class="main">
+      <div class="left">
+        <div id="preview" class="preview">
+          <div class="unit-frame">
+            <div class="unit-inner">
+              <div class="unit-name">Unitname</div>
+              <div class="unit-percent">100%</div>
+            </div>
+          </div>
+          <div id="overlayGrid" class="overlay-grid" aria-hidden="false">
+            <div class="grid-cell" data-section="0">
+              <div class="cell-bg"></div>
+              <button class="cell-btn">1</button>
+            </div>
+            <div class="grid-cell" data-section="1">
+              <div class="cell-bg"></div>
+              <button class="cell-btn">2</button>
+            </div>
+            <div class="grid-cell" data-section="2">
+              <div class="cell-bg"></div>
+              <button class="cell-btn">3</button>
+            </div>
+            <div class="grid-cell" data-section="3">
+              <div class="cell-bg"></div>
+              <button class="cell-btn">4</button>
+            </div>
+            <div class="grid-cell" data-section="4">
+              <div class="cell-bg"></div>
+              <button class="cell-btn">5</button>
+            </div>
+            <div class="grid-cell" data-section="5">
+              <div class="cell-bg"></div>
+              <button class="cell-btn">6</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div id="spellsList"></div>
+        <div class="controls">
+          <button id="saveBtn">Save Textures (.tga → .zip)</button>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div class="container">
+    <h1>Usage</h1>
+    This is a texture generator to make <a href="">Harrek's Disgusting Buff Tracker</a> work. You need the addon installed and the icons inside your '/Interface/Icons' folder for it to work.
+    <ol>
+      <li>Pick the spec you want to make icons for at the top.</li>
+      <li>Select where each available buff will go on the frame. Use the preview to help you visualize it.</li>
+      <li>Once you are done with your set up, click 'Save Textures', this will download a .zip with all your new icons.</li>
+      <li>Put these files inside 'World of Warcraft/Interface/Icons/'. If the folder doesn't exist you can just make it.</li>
+    </ol>
+    <h1>F.A.Q.</h1>
+    <h2>Can i have icons for multiple specs at once?</h2>
+    You can have all the icons in your wow folder at the same time and it will work, but you need to create them spec by spec here. Changing between specs will reset everything so just do one at a time.
+    <h2>Why only six slots?</h2>
+    It seemed like a reasonable number to offer a bit of customization without going overboard. Basically i felt like six.
+    <h2>Why only these spells? can i add x?</h2>
+    No. The list comes from Blizzard i am simply replacing the icons and sticking them in your frames, i can't do anything to add or remove spells from the list.
+    <h2>Can i replace only some of the spells?</h2>
+    No. The method requires all icons to be either colored squares or fully transparent, any icon not replaced would result in a huge square covering half the frame. Icons that you don't select a section for will simply be invisible everywhere.
+    <h2>Is there a way to do the icon tracking but keep the icons working on action bars/talent tree/cooldown manager?</h2>
+    Not that i am aware of.
+    <h2>Is this vibe coded?</h2>
+    Yea a good part of it. This really is a disgusting solution (hence the name) and i wanted to avoid spending time on it as much as possible.
+    <h2>But does it work well?</h2>
+    Yea it works, i haven't done super extensive testing but i got it running on dungeons and i don't see why it would break in a raid. You won't find the most clean and efficient code ever here but if you have played wow for long enough im sure you have used worse addons before performance-wise. If you do find a bug feel free to send it my way.
+    <h2>Can you add/do/improve x/y/z?</h2>
+    Most likely no. I am releasing this so people can play with it and because i think it is funny but i really hope we don't actually resort to this type of thing for tracking buffs. I plan to fix bugs so it does what it is supposed to work but i would prefer avoiding spending more time on it.
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

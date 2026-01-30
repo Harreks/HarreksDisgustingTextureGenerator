@@ -1,0 +1,46 @@
+:root{
+  --bg:#0f1316;
+  --panel:#14181b;
+  --muted:#e4e6e7;
+  --accent:#3aa0ff;
+  --card:#0b0d0e;
+}
+*{box-sizing:border-box;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif}
+body{margin:0;background:var(--bg);color:#e6eef2}
+.container{max-width:960px;margin:18px auto;padding:18px}
+header{display:flex;align-items:center;gap:12px}
+h1{font-size:18px;margin:0;color:var(--accent)}
+h2{font-size:16px;margin:0;margin-left:15px;margin-top:20px;color:var(--accent)}
+.specs-row{display:flex;gap:8px;margin:14px 0}
+.spec-icon{width:48px;height:48px;border-radius:6px;overflow:hidden;border:2px solid transparent;cursor:pointer}
+.spec-icon img{width:100%;height:100%;object-fit:cover;display:block}
+.spec-icon.selected{border-color:var(--accent)}
+.main{display:flex;gap:18px}
+.left{position:relative;background:linear-gradient(180deg,#071011,#0b0d0e);padding:10px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+.preview{position:relative;width:100%;width:350px;height:150px;border:1px solid rgba(255,255,255,0.06);border-radius:6px;overflow:hidden;box-shadow:inset 0 1px 0 rgba(255,255,255,0.02), 0 4px 12px rgba(0,0,0,0.5);background:#071011}
+.unit-frame{position:absolute;left:0;top:0px;bottom:0px;right:0px;width:100%;background:#081217;border-radius:6px;padding:0px;display:flex;align-items:center;justify-content:center}
+.unit-inner{width:100%;height:100%;background:#2a96a6;border-radius:4px;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.unit-name{position:absolute;top:8px;left:12px;right:12px;height:18px;background:rgba(0,0,0,0.12);display:flex;align-items:center;justify-content:center;font-weight:700}
+.unit-percent{font-family:serif;font-size:36px;color:rgba(255,255,255,0.95);text-shadow:0 2px 0 rgba(0,0,0,0.6)}
+a{color:var(--accent)}
+
+/* overlay grid on the right - covers the unit frame's right section */
+.overlay-grid{position:absolute;top:0;right:0;width:100px;height:150px;display:grid;grid-template-columns:repeat(2,50px);grid-template-rows:repeat(3,50px);gap:0;padding:0;box-sizing:border-box;z-index:20}
+.grid-cell{position:relative;width:50px;height:50px;display:flex;justify-content:center}
+.cell-bg{position:absolute;inset:0;border-radius:4px;background:transparent;border:1px solid rgba(255,255,255,0.03)}
+.cell-btn{background:#0b0d0e;color:#fff;font-weight:700;width:100%;height:100%}
+.right{flex:1;min-width:260px}
+#spellsList{display:flex;flex-direction:column;gap:8px}
+.spell-row{display:flex;align-items:center;gap:8px;background:var(--panel);padding:8px;border-radius:6px}
+.spell-info{display:flex;align-items:center;gap:8px;flex:1}
+.spell-info img{width:36px;height:36px;border-radius:4px}
+.spell-name{font-size:14px}
+.spell-controls{display:flex;gap:8px;align-items:center}
+.controls{margin-top:12px}
+button{background:var(--accent);color:#061018;border:0;padding:8px 12px;border-radius:6px;cursor:pointer}
+footer{margin-top:16px;color:var(--muted);font-size:12px}
+
+input[type=color]{width:44px;height:32px;border:0;background:transparent;padding:0}
+select{background:black;color:var(--muted);border:1px solid rgba(255,255,255,0.04);padding:6px;border-radius:6px}
+
+@media(max-width:760px){.main{flex-direction:column}.left{order:2}}
